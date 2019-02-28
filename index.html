@@ -71,18 +71,7 @@
             <input type="text" class="form-control" placeholder="Driver">
           </div>
           <div class="col-2">
-            <button type="button" class="btn btn-light">+</button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-2">
-            <label for="exampleInputPassword1">
-          </div>
-          <div class="col-4">
-            <input type="text" class="form-control" placeholder="Driver">
-          </div>
-          <div class="col-2">
-            <button type="button" class="btn btn-light">+</button>
+            <button type="button " class="btn btn-light plusDriver">+</button>
           </div>
         </div>
       </div>
@@ -203,7 +192,7 @@
             <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control"
               placeholder="Need to add a check box">
           </div>
-<!-- ID -->
+          <!-- ID -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
             <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control"
@@ -336,6 +325,28 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+
+
+  <!-- JS -->
+  <script type="text/javascript">
+    $(".plusDriver").on("click", function (e) {
+      e.preventDefault();
+      $(".addDriver").append('<div class="row con"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove">X</button></div></div>');
+
+    });
+
+
+    // delete button
+    $(document).ready(function() {
+
+  // delegating event here
+  $('body').on('click','.btnRemove',function() {
+    $(this).parent('div.con').remove();
+    console.log("ok")
+
+  });
+});
+  </script>
 </body>
 
 </html>
