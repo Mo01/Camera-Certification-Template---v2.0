@@ -341,7 +341,7 @@
 
   // delegating event here
   $('body').on('click','.btnRemove',function() {
-    $(this).parent('div.con').remove();
+    $(this).closest('div.con').remove();
     console.log("ok")
 
   });
