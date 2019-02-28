@@ -8,7 +8,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -18,12 +18,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-    <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/app.js"></script>
 </head>
 
 <body>
   <div class="container">
     <form>
+      <!-- Name of tester -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Name of tester
@@ -32,6 +33,7 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Date -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Date
@@ -40,6 +42,7 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- CV Version -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">CV Version
@@ -48,6 +51,7 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Machaine Specs -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Machaine Specs
@@ -56,17 +60,36 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
-      <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Driver(s)
+
+      <!-- Drivers -->
+      <div class="addDriver">
+        <div class="row">
+          <div class="col-2">
+            <label for="exampleInputPassword1">Driver(s)
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control" placeholder="Driver">
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-light">+</button>
+          </div>
         </div>
-        <div class="col-4">
-          <input type="text" class="form-control" placeholder="Driver">
-        </div>
-        <div class="col-2">
-          <button type="button" class="btn btn-light">+</button>
+        <div class="row">
+          <div class="col-2">
+            <label for="exampleInputPassword1">
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control" placeholder="Driver">
+          </div>
+          <div class="col-2">
+            <button type="button" class="btn btn-light">+</button>
+          </div>
         </div>
       </div>
+
+
+
+      <!-- Manfacture -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Manfacture
@@ -75,6 +98,7 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Model -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Model
@@ -83,6 +107,7 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Mac address -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Mac address
@@ -91,19 +116,20 @@
           <input type="text" class="form-control" placeholder="">
         </div>
         <div class="col-1">
-            <input type="text" class="form-control" placeholder="">
-          </div>
-          <div class="col-1">
-              <input type="text" class="form-control" placeholder="">
-            </div>
-            <div class="col-1">
-                <input type="text" class="form-control" placeholder="">
-              </div>
-              <div class="col-1">
-                  <input type="text" class="form-control" placeholder="">
-                </div>
-                
+          <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="">
+        </div>
+
       </div>
+      <!-- Type -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Type
@@ -112,132 +138,141 @@
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Protocols -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Protocols
         </div>
         <div class="col-4">
-          <!-- Material inline 1 -->
+          <!-- TCP -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline1">
             <label class="form-check-label" for="materialInline1">TCP</label>
           </div>
 
-          <!-- Material inline 2 -->
+          <!-- UDP -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
             <label class="form-check-label" for="materialInline2">UDP</label>
           </div>
         </div>
       </div>
+      <!-- Supported Stream Types -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Supported Stream Types
         </div>
         <div class="col-4">
-           <!-- Material inline 1 -->
-           <div class="form-check form-check-inline">
+          <!-- H264 Material inline -->
+          <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline1">
             <label class="form-check-label" for="materialInline1">H264</label>
           </div>
 
-          <!-- Material inline 2 -->
+          <!-- MJPEG -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
             <label class="form-check-label" for="materialInline2">MJPEG</label>
           </div>
-           <!-- Material inline 3 -->
-           <div class="form-check form-check-inline">
+          <!-- MPEG4 -->
+          <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
             <label class="form-check-label" for="materialInline2">MPEG4</label>
           </div>
         </div>
       </div>
+      <!-- Non Supported Stream Types -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Non Supported Stream Types
         </div>
         <div class="col-4">
-          
+
           <input type="text" class="form-control" placeholder="name">
         </div>
       </div>
+      <!-- Streams ID/CH -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Streams ID/CH
         </div>
         <div class="col-8">
-          <!-- Material inline 3 -->
+          <!-- CH -->
           <div class="form-check form-check-inline">
-              <input type="checkbox" class="form-check-input" id="materialInline2">
-              <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control" placeholder="Need to add a check box">
-            </div>
-         
-            <div class="form-check form-check-inline">
-                <input type="checkbox" class="form-check-input" id="materialInline2">
-                <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control" placeholder="Need to add a check box">
-              </div>
+            <input type="checkbox" class="form-check-input" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control"
+              placeholder="Need to add a check box">
+          </div>
+<!-- ID -->
+          <div class="form-check form-check-inline">
+            <input type="checkbox" class="form-check-input" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control"
+              placeholder="Need to add a check box">
+          </div>
         </div>
       </div>
+      <!-- Camera's IP -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Camera's IP
         </div>
         <div class="col-1">
-            <input type="text" class="form-control" placeholder="IP">
-          </div>
-          <div class="col-1">
-              <input type="text" class="form-control" placeholder="IP">
-            </div>
-            <div class="col-1">
-                <input type="text" class="form-control" placeholder="IP">
-              </div>
-              <div class="col-1">
-                  <input type="text" class="form-control" placeholder="IP">
-                </div>
+          <input type="text" class="form-control" placeholder="IP">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="IP">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="IP">
+        </div>
+        <div class="col-1">
+          <input type="text" class="form-control" placeholder="IP">
+        </div>
       </div>
-      
+      <!-- UserName/passwords -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">UserName/passwords
         </div>
         <div class="col-3">
-            <input type="text" class="form-control" placeholder="user name">
-          </div>
-          <div class="col-3">
-              <input type="text" class="form-control" placeholder="Password">
-            </div>
+          <input type="text" class="form-control" placeholder="user name">
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control" placeholder="Password">
+        </div>
       </div>
+      <!-- FW V/Updated -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">FW V/Updated
         </div>
-        
+
         <div class="col-4">
-          
+
           <input type="text" class="form-control" placeholder="add radioBtn for updating">
         </div>
         <div class="col-1">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-              <label class="form-check-label" for="gridRadios1">
-                Yes
-              </label>
-            </div>
-  
-  
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              Yes
+            </label>
           </div>
-          <div class="col-1">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                <label class="form-check-label" for="gridRadios1">
-                  No
-                </label>
-              </div>
-    
-    
-            </div>
+
+
+        </div>
+        <div class="col-1">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+              No
+            </label>
+          </div>
+
+
+        </div>
       </div>
+      <!-- Audio -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Audio
@@ -246,6 +281,7 @@
           <input type="text" class="form-control" placeholder="2 radioBtn Y/N 2 check boxs in out ">
         </div>
       </div>
+      <!-- PTZ -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">PTZ
@@ -254,6 +290,7 @@
           <input type="text" class="form-control" placeholder="add a div with all the needed info">
         </div>
       </div>
+      <!-- Dewarping -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Dewarping
@@ -262,6 +299,7 @@
           <input type="text" class="form-control" placeholder="add a div with the requirement info">
         </div>
       </div>
+      <!-- Analytic -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Analytic
