@@ -806,7 +806,7 @@
 
     $(".plusDriver").on("click", function (e) {
       e.preventDefault();
-      $(".addDriver").append(`<div class="row del con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove">Delete ID${i}</button></div></div>`);
+      $(".addDriver").append(`<div class="row con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove">Delete ID${i}</button></div></div>`);
       i++;
     });
 
@@ -816,7 +816,7 @@
 
     // delegating event here
     $('body').on('click', '.btnRemove', function () {
-      $(this).closest(`div.del`).remove();
+      $(this).parent().parent().remove();
       console.log(i)
 
       // });
