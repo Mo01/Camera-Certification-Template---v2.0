@@ -19,25 +19,45 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="assets/javascript/app.js"></script>
+  <!-- CSS -->
+  <style>
+    .PTZ {
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
   <div class="container">
     <form>
-<!--List  -->
-<div class="row">
-    <div class="col-4">
-      <div class="dropdown">
-        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">list
-        <span class="caret"></span></button>
-        <ul class="dropdown-menu" id="list1">
-          <li><a href="#" id="1">1</a></li>
-        </ul>
+      <div class="row">
+        <div class="col-12">
+          <!-- <video width="400" controls>
+            <source src="rtsp://admin:admin@172.18.15.7:554/ch01/0" type="video/mp4">
+
+            Your browser does not support HTML5 video.
+          </video> -->
+          <input id="myTextBox" type="text" />
+
+        </div>
       </div>
+
+
+
+      <!--List  -->
+      <div class="row">
+        <div class="col-4">
+          <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">list
+              <span class="caret"></span></button>
+            <ul class="dropdown-menu" id="list1">
+              <li><a href="#" id="1">1</a></li>
+            </ul>
+          </div>
+        </div>
+
+
       </div>
-  
-  
-    </div>
 
       <!-- Name of tester -->
       <div class="row">
@@ -331,12 +351,12 @@
           <label for="exampleInputPassword1">PTZ Capable
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioP">Yes</label>
+          <label class="radio-inline PtzYes"><input type="radio" name="optradioP">Yes</label>
 
 
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioP">No</label>
+          <label class="radio-inline PtzNo"><input type="radio" name="optradioP">No</label>
         </div>
 
       </div>
@@ -812,9 +832,9 @@
     </form>
   </div>
 
-  
-    
-  
+
+
+
 
 
   <!-- JS -->
@@ -825,20 +845,33 @@
 
     $(".plusDriver").on("click", function (e) {
       e.preventDefault();
-      $( ".btnRemove" ).hide();
+      $(".btnRemove").hide();
       $(".addDriver").append(`<div class="row" id="con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove" id="btnRemove${i}">X</button></div></div>`);
-        $("#list1").append(`<li><a href="#" id=${i+1}>${i+1}</a></li>`)
+      $("#list1").append(`<li><a href="#" id=${i + 1}>${i + 1}</a></li>`)
       i++;
-      
+
     });
 
     // delegating event here
     $('body').on('click', '.btnRemove', function () {
       $(this).parent().parent().remove();
-      $( `#btnRemove${i-2}`).show();
+      $(`#btnRemove${i - 2}`).show();
       $(`#${i}`).remove();
       i--;
 
+    });
+
+    // Detect the chane  // input ==>>//
+    $("#myTextBox").bind("change paste keyup select  propertychange", function () {
+      alert($(this).val().trim());
+    });
+
+    //Display PTZ
+    $(".PtzYes").on("click", () => {
+      $(".PTZ").css("display", "block");
+    });
+    $(".PtzNo").on("click", () => {
+      $(".PTZ").css("display", "none");
     });
   </script>
 </body>
