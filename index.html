@@ -44,20 +44,21 @@
 
 
 
-      <!--List  -->
+      <!-- PTZ List  -->
       <div class="row">
         <div class="col-4">
           <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">list
+            <button class="btn btn-primary dropdown-toggle PtzBL" type="button" data-toggle="dropdown"> PTZ Drivers list
               <span class="caret"></span></button>
-            <ul class="dropdown-menu" id="list1">
-              <li><a href="#" id="1">1</a></li>
+            <ul class="dropdown-menu PtzList" id="PtzList">
+              
             </ul>
           </div>
         </div>
 
 
       </div>
+
 
       <!-- Name of tester -->
       <div class="row">
@@ -844,7 +845,7 @@
       `RVision`, `SAE`, `Sensormatic`, `Sony`, `VCL`, `Vicon`, `Vicon Extended`, `ACTi Pelco-P IP`, `ACTi HTTP IP`, `ACTi Pelco-D IP`, `AD Illustra IP`, `AD IP`, `Axis V2 IP`, `Axis V2 IP (Firmware 4.40)`, `Bosch BiCom IP`, `Bosch OSRD IP`, `Bosch Pelco-D IP`,
       `Brickcom IP`, `Canon IP`, `Cisco IP (v.1.0)`, `Digital`, `Generic-D IP`, `Hikvision Speed Dome IP`, `Mobotix IP`, `Panasonic IP`, `Pelco IP`, `Pelco API`, `Samsung IP`, `Sentry360 IP`, `Sony IP-Continuous Move`, `Sony IP-Move`, `Sony VISCA IP`, `Speco IP`, `Symmetry ENVS IP`,
       `Symmetry IP`, `Toshiba IK-WB21A IP`, `Toshiba IK-WB IP`, `Vivotek IP`, `Nexus(DLTV) IP`, `Nexus(IR) IP`, `FLIR IP`, `Dahua IP`, `Samsung`, `VMS Remote PTZ`, `Samsung IP (v2)`]
-
+   
     let i = 1;
     console.log(i);
 
@@ -857,7 +858,7 @@
 
     });
 
-    // delegating event here
+    // deleting driver extra txet box
     $('body').on('click', '.btnRemove', function () {
       $(this).parent().parent().remove();
       $(`#btnRemove${i - 2}`).show();
@@ -878,6 +879,19 @@
     $(".PtzNo").on("click", () => {
       $(".PTZ").css("display", "none");
     });
+
+    //PTZ driver list
+    PtzDrivers.forEach((ptzD)=> {
+      $(".PtzList").append(`<li><a href="#" class="PTZ1" value="${ptzD}">${ptzD}</a></li>`)
+
+    });
+    $(".PTZ1").on('click', () =>{
+      let pValk = $(".PTZ1").text();
+      console.log(pValk);
+      // $(".PtzBL").text(pValk);
+      
+    })
+ 
   </script>
 </body>
 
