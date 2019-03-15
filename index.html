@@ -83,7 +83,7 @@
             <label for="exampleInputPassword1">Driver(s)
           </div>
           <div class="col-4">
-            <input type="text" class="form-control" placeholder="Driver">
+            <input type="text" class="form-control drive-1" placeholder="Driver">
           </div>
           <div class="col-2">
             <button type="button " class="btn btn-light plusDriver">+</button>
@@ -810,7 +810,7 @@
     $(".plusDriver").on("click", function (e) {
       e.preventDefault();
       $(".btnRemove").hide();
-      $(".addDriver").append(`<div class="row" id="con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove" id="btnRemove${i}">X</button></div></div>`);
+      $(".addDriver").append(`<div class="row" id="con-${i}"><div class="col-2"><label for="exampleInputPassword1"></div><div class="col-4"><input type="text" class="form-control  drive-${i+1}" placeholder="Driver"></div><div class="col-2"><button type="button" class="btn btn-light btnRemove" id="btnRemove${i}">X</button></div></div>`);
       $("#list1").append(`<li><a href="#" id=${i + 1}>${i + 1}</a></li>`)
       i++;
 
@@ -845,12 +845,12 @@
 
       
     });
-    $(".PTZ1").on('click', () =>{
-      let pValk = $(".PTZ1").text();
-      console.log(pValk);
-      // $(".PtzBL").text(pValk);
+    // $(".PTZ1").on('click', () =>{
+    //   let pValk = $(".PTZ1").text();
+    //   console.log(pValk);
+    //   // $(".PtzBL").text(pValk);
       
-    })
+    // })
  
   </script>
 </body>
