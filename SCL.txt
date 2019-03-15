@@ -2,3 +2,6 @@
 RVision,SAE,Sensormatic,Sony,VCL,Vicon,Vicon Extended,ACTi Pelco-P IP,ACTi HTTP IP,ACTi Pelco-D IP,AD Illustra IP,AD IP,Axis V2 IP,Axis V2 IP (Firmware 4.40),Bosch BiCom IP,Bosch OSRD IP,Bosch Pelco-D IP,
 Brickcom IP,Canon IP,Cisco IP (v.1.0),Digital",Generic-D IP",Hikvision Speed Dome IP,Mobotix IP,Panasonic IP,Pelco IP,Pelco API,Samsung IP,Sentry360 IP,Sony IP-Continuous Move,Sony IP-Move,Sony VISCA IP,Speco IP,Symmetry ENVS IP,
 Symmetry IP,Toshiba IK-WB21A IP,Toshiba IK-WB IP,Vivotek IP,Nexus(DLTV) IP,Nexus(IR) IP,FLIR IP,Dahua IP,Samsung,VMS Remote PTZ,Samsung IP (v2)]
+
+[`Acti`,`Axis`,`Bosch`,`HikVision`,`ImmerVision`,`Oncam`,`Samsung`,`Sentry 360`,`Standard`,`Vivotek`]
+[`None`,`A0`,`A1`,`A8`,`B0`,`B4`,`B5`,`B6`,`B7`,`B8`,`B9`,`C1`,`C3`,`C4`,`C7`,`C8`,`C9`]

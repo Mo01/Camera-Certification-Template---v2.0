@@ -24,6 +24,10 @@
     .PTZ {
       display: none;
     }
+
+    .Dew {
+      display: none;
+    }
   </style>
 </head>
 
@@ -718,12 +722,36 @@
           <label for="exampleInputPassword1">Dewarping
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioD">Yes</label>
+          <label class="radio-inline DewYes"><input type="radio" name="optradioD">Yes</label>
 
 
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioD">No</label>
+          <label class="radio-inline DewNo"><input type="radio" name="optradioD">No</label>
+        </div>
+      </div>
+      <!-- Dewarping Driver Used -->
+
+
+      <div class="row Dew">
+        <div class="col-1">
+
+        </div>
+        <div class="col-2">
+          <label for="exampleInputPassword1">Dewarping Driver
+        </div>
+        <div class="col-2">
+          <select class="ui search dropdown DewarpingT">
+            <option value="">Dewarping Drivers list </option>
+
+          </select>
+        </div>
+        <div class="col-2">
+          <select class="ui search dropdown DewarpingP">
+            <option value="">None</option>
+
+          </select>
+
         </div>
       </div>
       <!-- Analytic -->
@@ -762,13 +790,16 @@
 
 
 
-  <!-- JS -->
+  <!-- JS  Jquery-->
   <script type="text/javascript">
     // PTZ Drivers array
     let PtzDrivers = [`AD Pelco P`, `AD ASCII Continuous `, `AD ASCII Make/Break`, `Philips Biphase`, `Canon VC-C4`, `Ultrak KD6 (Diamond)`, `Kalatel`, `Panasonic WV-CS850 Conv`, `Panasonic WV-CS850 New`, `Pelco ASCII`, `Pelco D`, `Pelco P`,
       `RVision`, `SAE`, `Sensormatic`, `Sony`, `VCL`, `Vicon`, `Vicon Extended`, `ACTi Pelco-P IP`, `ACTi HTTP IP`, `ACTi Pelco-D IP`, `AD Illustra IP`, `AD IP`, `Axis V2 IP`, `Axis V2 IP (Firmware 4.40)`, `Bosch BiCom IP`, `Bosch OSRD IP`, `Bosch Pelco-D IP`,
       `Brickcom IP`, `Canon IP`, `Cisco IP (v.1.0)`, `Digital`, `Generic-D IP`, `Hikvision Speed Dome IP`, `Mobotix IP`, `Panasonic IP`, `Pelco IP`, `Pelco API`, `Samsung IP`, `Sentry360 IP`, `Sony IP-Continuous Move`, `Sony IP-Move`, `Sony VISCA IP`, `Speco IP`, `Symmetry ENVS IP`,
-      `Symmetry IP`, `Toshiba IK-WB21A IP`, `Toshiba IK-WB IP`, `Vivotek IP`, `Nexus(DLTV) IP`, `Nexus(IR) IP`, `FLIR IP`, `Dahua IP`, `Samsung`, `VMS Remote PTZ`, `Samsung IP (v2)`]
+      `Symmetry IP`, `Toshiba IK-WB21A IP`, `Toshiba IK-WB IP`, `Vivotek IP`, `Nexus(DLTV) IP`, `Nexus(IR) IP`, `FLIR IP`, `Dahua IP`, `Samsung`, `VMS Remote PTZ`, `Samsung IP (v2)`];
+    //  Dewarping drivers
+    let lensType = [`Acti`, `Axis`, `Bosch`, `HikVision`, `ImmerVision`, `Oncam`, `Samsung`, `Sentry 360`, `Standard`, `Vivotek`];
+    let lensProfile = [`A0`, `A1`, `A8`, `B0`, `B4`, `B5`, `B6`, `B7`, `B8`, `B9`, `C1`, `C3`, `C4`, `C7`, `C8`, `C9`];
 
     let i = 1;
     console.log(i);
@@ -806,17 +837,27 @@
 
     //PTZ driver list
     PtzDrivers.forEach((ptzD) => {
-      // $(".PtzList").append(`<li><a href="#" class="PTZ1" value="${ptzD}">${ptzD}</a></li>`)
       $(".PtzList").append(`<option value="${ptzD}">${ptzD}</option>`)
 
 
     });
-    // $(".PTZ1").on('click', () =>{
-    //   let pValk = $(".PTZ1").text();
-    //   console.log(pValk);
-    //   // $(".PtzBL").text(pValk);
 
-    // })
+    // Dewarping driver list
+    lensType.forEach((lensT) => {
+      $(".DewarpingT").append(`<option value="${lensT}">${lensT}</option>`)
+    });
+    lensProfile.forEach((lensT) => {
+      $(".DewarpingP").append(`<option value="${lensT}">${lensT}</option>`)
+    });
+    //Dewarping PTZ
+    $(".DewYes").on("click", () => {
+      $(".Dew").css("display", "inline-block");
+    });
+    $(".DewNo").on("click", () => {
+      $(".Dew").css("display", "none");
+    });
+
+
 
   </script>
 </body>
