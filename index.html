@@ -30,34 +30,10 @@
 <body>
   <div class="container">
     <form>
-      <div class="row">
-        <div class="col-12">
-          <!-- <video width="400" controls>
-            <source src="rtsp://admin:admin@172.18.15.7:554/ch01/0" type="video/mp4">
-
-            Your browser does not support HTML5 video.
-          </video> -->
-          <input id="myTextBox" type="text" />
-
-        </div>
-      </div>
+     
 
 
 
-      <!-- PTZ List  -->
-      <div class="row">
-        <div class="col-4">
-          <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle PtzBL" type="button" data-toggle="dropdown"> PTZ Drivers list
-              <span class="caret"></span></button>
-            <ul class="dropdown-menu PtzList" id="PtzList">
-
-            </ul>
-          </div>
-        </div>
-
-
-      </div>
 
 
       <!-- Name of tester -->
@@ -374,33 +350,15 @@
             <label for="exampleInputPassword1">PTZ Driver Used
           </div>
           <div class="col-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPD" id="gridRadios" value="option1">
-              <label class="form-check-label" for="gridRadios1">
-                P
-              </label>
-            </div>
+            <select class="ui search dropdown PtzList">
+              <option value="">PTZ Drivers list </option>
+              
+            </select>
+  
 
 
           </div>
-          <div class="col-1">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPD" id="gridRadios1" value="option1">
-              <label class="form-check-label" for="gridRadios1">
-                F
-              </label>
-            </div>
-
-          </div>
-          <div class="col-2">
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPD" id="gridRadios1" value="option1">
-              <label class="form-check-label">
-                Not supported
-              </label>
-            </div>
-
-          </div>
+        
         </div>
 
         <!-- PTZ ID Used -->
@@ -845,7 +803,7 @@
       `RVision`, `SAE`, `Sensormatic`, `Sony`, `VCL`, `Vicon`, `Vicon Extended`, `ACTi Pelco-P IP`, `ACTi HTTP IP`, `ACTi Pelco-D IP`, `AD Illustra IP`, `AD IP`, `Axis V2 IP`, `Axis V2 IP (Firmware 4.40)`, `Bosch BiCom IP`, `Bosch OSRD IP`, `Bosch Pelco-D IP`,
       `Brickcom IP`, `Canon IP`, `Cisco IP (v.1.0)`, `Digital`, `Generic-D IP`, `Hikvision Speed Dome IP`, `Mobotix IP`, `Panasonic IP`, `Pelco IP`, `Pelco API`, `Samsung IP`, `Sentry360 IP`, `Sony IP-Continuous Move`, `Sony IP-Move`, `Sony VISCA IP`, `Speco IP`, `Symmetry ENVS IP`,
       `Symmetry IP`, `Toshiba IK-WB21A IP`, `Toshiba IK-WB IP`, `Vivotek IP`, `Nexus(DLTV) IP`, `Nexus(IR) IP`, `FLIR IP`, `Dahua IP`, `Samsung`, `VMS Remote PTZ`, `Samsung IP (v2)`]
-
+   
     let i = 1;
     console.log(i);
 
@@ -881,23 +839,19 @@
     });
 
     //PTZ driver list
-    PtzDrivers.forEach((ptzD) => {
-      $(".PtzList").append(`<li><a href="#" class="PTZ1" value="${ptzD}">${ptzD}</a></li>`)
+    PtzDrivers.forEach((ptzD)=> {
+      // $(".PtzList").append(`<li><a href="#" class="PTZ1" value="${ptzD}">${ptzD}</a></li>`)
+      $(".PtzList").append(`<option value="${ptzD}">${ptzD}</option>`)
 
+      
     });
-    // $(".PTZ1").on('click', function () {
-
-    //   $(".PtzBL").text($(this).text());
-
-    // });
-
-    $(".PTZ1").on('click',  (e) =>{
-
-$(".PtzBL").text(e.target.innerText);
-console.log(e.target)
-
-})
-
+    $(".PTZ1").on('click', () =>{
+      let pValk = $(".PTZ1").text();
+      console.log(pValk);
+      // $(".PtzBL").text(pValk);
+      
+    })
+ 
   </script>
 </body>
 
