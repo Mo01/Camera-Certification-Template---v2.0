@@ -150,13 +150,13 @@
           <!-- TCP -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline1">
-            <label class="form-check-label" for="materialInline1">TCP</label>
+            <label class="form-check-label tcp" for="materialInline1 ">TCP</label>
           </div>
 
           <!-- UDP -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">UDP</label>
+            <label class="form-check-label udp" for="materialInline2">UDP</label>
           </div>
         </div>
       </div>
@@ -170,18 +170,18 @@
           <!-- H264 Material inline -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline1">
-            <label class="form-check-label" for="materialInline1">H264</label>
+            <label class="form-check-label H264" for="materialInline1">H264</label>
           </div>
 
           <!-- MJPEG -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">MJPEG</label>
+            <label class="form-check-label MJPEG" for="materialInline2">MJPEG</label>
           </div>
           <!-- MPEG4 -->
           <div class="form-check form-check-inline">
             <input type="checkbox" class="form-check-input" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">MPEG4</label>
+            <label class="form-check-label MPEG4" for="materialInline2">MPEG4</label>
           </div>
         </div>
       </div>
@@ -205,14 +205,14 @@
         <div class="col-8">
           <!-- CH -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control"
+            <input type="checkbox" class="form-check-input chBox" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">CH.</label><input type="text" class="form-control idInput"
               placeholder="CH">
           </div>
           <!-- ID -->
           <div class="form-check form-check-inline">
-            <input type="checkbox" class="form-check-input" id="materialInline2">
-            <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control"
+            <input type="checkbox" class="form-check-input idBox" id="materialInline2">
+            <label class="form-check-label" for="materialInline2">ID.</label><input type="text" class="form-control idInput"
               placeholder="ID">
           </div>
         </div>
@@ -224,16 +224,16 @@
           <label for="exampleInputPassword1">Camera's IP
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control ip1" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control ip2" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control ip3" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control ip4" placeholder="xx">
         </div>
       </div>
 
@@ -243,10 +243,10 @@
           <label for="exampleInputPassword1">UserName/passwords
         </div>
         <div class="col-3">
-          <input type="text" class="form-control" placeholder="UserName">
+          <input type="text" class="form-control uName" placeholder="UserName">
         </div>
         <div class="col-3">
-          <input type="text" class="form-control" placeholder="Password">
+          <input type="text" class="form-control pWord" placeholder="Password">
         </div>
       </div>
 
@@ -261,12 +261,12 @@
           <input type="text" class="form-control" placeholder="FW">
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioF">Yes</label>
+          <label class="radio-inline yFWu"><input type="radio" name="optradioF">Yes</label>
 
 
         </div>
         <div class="col-1">
-          <label class="radio-inline"><input type="radio" name="optradioF">No</label>
+          <label class="radio-inline nFWu"><input type="radio" name="optradioF">No</label>
         </div>
 
 
@@ -280,7 +280,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" value="option12">
+            <input class="form-check-input nAudio" type="radio" name="gridRadios" value="option12">
             <label class="form-check-label">
               No Audio
             </label>
@@ -291,7 +291,7 @@
         <div class="col-3">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" value="option13">
-            <label class="form-check-label">
+            <label class="form-check-label cvNotSupportAudio">
               CV does not supported
             </label>
           </div>
@@ -300,7 +300,7 @@
         <div class="col-2">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" value="option14">
-            <label class="form-check-label">
+            <label class="form-check-label oneWayAudio">
               One way
             </label>
           </div>
@@ -310,7 +310,7 @@
         <div class="col-2">
           <div class="form-check">
             <input class="form-check-input" type="radio" name="gridRadios" value="option1">
-            <label class="form-check-label">
+            <label class="form-check-label twoWayAudio">
               Two way
             </label>
           </div>
@@ -367,7 +367,7 @@
             <label for="exampleInputPassword1">PTZ ID Used
           </div>
           <div class="col-2">
-            <input type="text" class="form-control" placeholder="ID">
+            <input type="text" class="form-control ptzId" placeholder="ID">
           </div>
 
         </div>
@@ -382,7 +382,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios" value="option1">
+              <input class="form-check-input arrowP" type="radio" name="gridRadiosAB" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -392,7 +392,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
+              <input class="form-check-input arrowF" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -402,7 +402,7 @@
           <div class="col-2">
             <div class="form-check">
               <input class="form-check-input" type="radio" name="gridRadiosAB" id="gridRadios1" value="option1">
-              <label class="form-check-label">
+              <label class="form-check-label arrowNS">
                 Not supported
               </label>
             </div>
@@ -420,7 +420,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIO" id="gridRadios" value="option1">
+              <input class="form-check-input zoomP" type="radio" name="gridRadiosIO" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -430,7 +430,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <input class="form-check-input zoomF" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -439,7 +439,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
+              <input class="form-check-input zoomNS" type="radio" name="gridRadiosIO" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -458,7 +458,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIB" id="gridRadios" value="option1">
+              <input class="form-check-input irisP" type="radio" name="gridRadiosIB" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -468,7 +468,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <input class="form-check-input irisF" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -477,7 +477,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
+              <input class="form-check-input irisNS" type="radio" name="gridRadiosIB" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -496,7 +496,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios" value="option1">
+              <input class="form-check-input foucsP" type="radio" name="gridRadios" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -506,7 +506,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <input class="form-check-input foucsF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -515,7 +515,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+              <input class="form-check-input focusNS" type="radio" name="gridRadios" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -534,7 +534,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAI" id="gridRadios" value="option1">
+              <input class="form-check-input aIrisP" type="radio" name="gridRadiosAI" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -544,7 +544,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <input class="form-check-input aIrisF" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -553,7 +553,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
+              <input class="form-check-input aIrisNS" type="radio" name="gridRadiosAI" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -572,7 +572,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAF" id="gridRadios" value="option1">
+              <input class="form-check-input aFocusP" type="radio" name="gridRadiosAF" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -582,7 +582,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -591,7 +591,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
+              <input class="form-check-input aFocusF" type="radio" name="gridRadiosAF" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -611,7 +611,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPSA" id="gridRadios" value="option1">
+              <input class="form-check-input ptzSppedP" type="radio" name="gridRadiosPSA" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -621,7 +621,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <input class="form-check-input ptzSppedF" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -630,7 +630,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
+              <input class="form-check-input ptzSppedNS" type="radio" name="gridRadiosPSA" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -650,7 +650,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPP" id="gridRadios" value="option1">
+              <input class="form-check-input presetSetP" type="radio" name="gridRadiosPP" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -660,7 +660,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <input class="form-check-input presetSetF" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -669,7 +669,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
+              <input class="form-check-input presetSetNS" type="radio" name="gridRadiosPP" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -689,7 +689,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPPS" id="gridRadios" value="option1">
+              <input class="form-check-input presetShowP" type="radio" name="gridRadiosPPS" id="gridRadios" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 P
               </label>
@@ -699,7 +699,7 @@
           </div>
           <div class="col-1">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <input class="form-check-input presetShowF" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
               <label class="form-check-label" for="gridRadios1">
                 F
               </label>
@@ -708,7 +708,7 @@
           </div>
           <div class="col-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
+              <input class="form-check-input presetShowNS" type="radio" name="gridRadiosPPS" id="gridRadios1" value="option1">
               <label class="form-check-label">
                 Not supported
               </label>
@@ -769,7 +769,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input  analyticP" type="radio" name="gridRadios" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
               Yes
             </label>
@@ -779,7 +779,7 @@
         </div>
         <div class="col-2">
           <div class="form-check">
-            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+            <input class="form-check-input anaylyticF" type="radio" name="gridRadios" id="gridRadios1" value="option1">
             <label class="form-check-label" for="gridRadios1">
               No
             </label>
@@ -789,7 +789,7 @@
       </div>
 
 
-      <button type="submit" class="btn btn-primary ">Submit</button>
+      <button type="submit" class="btn btn-primary submitB">Submit</button>
     </form>
   </div>
 

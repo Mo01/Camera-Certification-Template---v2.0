@@ -4,10 +4,6 @@
 body{
     background-color: lightgrey;
 }
-.PTZ{
-    border: 2px red solid;
+.PTZ, .row{
+    border: 1px black solid;
 }
-
-/* .btnRemove{
-    display: block;
-} */
