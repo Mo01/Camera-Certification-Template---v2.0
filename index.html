@@ -100,6 +100,25 @@
         </div>
       </div>
 
+         <!-- Camera's IP -->
+         <div class="row">
+          <div class="col-2">
+            <label for="exampleInputPassword1">Camera's IP
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip1" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip2" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip3" maxlength="3" placeholder="xxx">
+          </div>
+          <div class="col-1">
+            <input type="text" class="form-control ip4" maxlength="3" placeholder="xxx">
+          </div>
+        </div>
+
       <!-- Mac address -->
       <div class="row">
         <div class="col-2">
@@ -218,24 +237,7 @@
         </div>
       </div>
 
-      <!-- Camera's IP -->
-      <div class="row">
-        <div class="col-2">
-          <label for="exampleInputPassword1">Camera's IP
-        </div>
-        <div class="col-1">
-          <input type="text" class="form-control ip1" maxlength="3" placeholder="xx">
-        </div>
-        <div class="col-1">
-          <input type="text" class="form-control ip2" maxlength="3" placeholder="xx">
-        </div>
-        <div class="col-1">
-          <input type="text" class="form-control ip3" maxlength="3" placeholder="xx">
-        </div>
-        <div class="col-1">
-          <input type="text" class="form-control ip4" maxlength="3" placeholder="xx">
-        </div>
-      </div>
+   
 
       <!-- UserName/passwords -->
       <div class="row">
@@ -882,6 +884,38 @@
 // console.log(e.target)
 
 // })
+
+//Submit button
+$(".submitB").on("click", (e) => {
+  e.preventDefault();
+console.log(`
+                    Salient Systems camera certification sheet
+ Name of tester: ${$(".NameOfTester").val().trim()}
+ Copleteview Version:
+
+ Driver(s) used:
+ Manfucture:
+ Model:
+
+ Camera's IP: 
+ Mac address: 
+
+ Device Type:
+ Protocols:
+ Supported Stream Types:
+ Non Supported Stream Types:
+ Streams ID/CH:
+ UserName/passwords:
+ FW V/Updated:
+
+ Audio:
+ PTZ Capable:
+ Dewarping:
+ Analytic:
+
+`)
+
+});
 
 
   </script>
