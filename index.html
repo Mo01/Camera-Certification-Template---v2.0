@@ -35,18 +35,13 @@
   <div class="container">
     <form>
 
-
-
-
-
-
       <!-- Name of tester -->
       <div class="row">
         <div class="col-2">
           <label for="exampleInputPassword1">Name of tester
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="Name of tester">
+          <input type="text" class="form-control NameOfTester" placeholder="Name of tester">
         </div>
       </div>
 
@@ -56,7 +51,7 @@
           <label for="exampleInputPassword1">CV Version
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="CV Version">
+          <input type="text" class="form-control CvVersion" placeholder="CV Version">
         </div>
       </div>
 
@@ -66,7 +61,7 @@
           <label for="exampleInputPassword1">Machaine Specs
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="Machaine Specs">
+          <input type="text" class="form-control MSpaces" placeholder="Machaine Specs">
         </div>
       </div>
 
@@ -91,7 +86,7 @@
           <label for="exampleInputPassword1">Manfacture
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="Manfacture">
+          <input type="text" class="form-control manfu" placeholder="Manfacture">
         </div>
       </div>
 
@@ -101,7 +96,7 @@
           <label for="exampleInputPassword1">Model
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="Model">
+          <input type="text" class="form-control model" placeholder="Model">
         </div>
       </div>
 
@@ -111,19 +106,19 @@
           <label for="exampleInputPassword1">Mac address
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control mac1" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control mac2" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control mac3" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control mac4" placeholder="xx">
         </div>
         <div class="col-1">
-          <input type="text" class="form-control" placeholder="xx">
+          <input type="text" class="form-control mac5" placeholder="xx">
         </div>
 
       </div>
@@ -131,10 +126,18 @@
       <!-- Type -->
       <div class="row">
         <div class="col-2">
-          <label for="exampleInputPassword1">Type
+          <label for="exampleInputPassword1">Device Type
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="Type">
+          <div class="col-2">
+            <select class="ui search dropdown deviceType">
+              <option value="">Device type list </option>
+
+            </select>
+
+
+
+          </div>
         </div>
       </div>
 
@@ -806,6 +809,10 @@
     let lensType = [`Acti`, `Axis`, `Bosch`, `HikVision`, `ImmerVision`, `Oncam`, `Samsung`, `Sentry 360`, `Standard`, `Vivotek`];
     let lensProfile = [`A0`, `A1`, `A8`, `B0`, `B4`, `B5`, `B6`, `B7`, `B8`, `B9`, `C1`, `C3`, `C4`, `C7`, `C8`, `C9`];
 
+    // Device type
+    let deviceType = ["180° IP Camera","270° IP Camera","360° IP Camera","Analog","Audio Bridge","Body camera","Bullet","Control Board","Cube","Dome","Doorstation / Intercom","DVR","Encoder","Fisheye","Fixed IP Camera","Flex lens camera","Hybrid Camera Receiver","Intercom","IP Horn Speaker","Multiple sensors","NVR","Panoramic IP Camera","PTZ IP Camera","Radar","Spy Camera","Thermal Bullet Camera","Thermal PTZ","Turrent IP Camera","Zoom IP Camera"]
+
+
     let i = 1;
     console.log(i);
 
@@ -841,8 +848,15 @@
     });
 
     //PTZ driver list
-    PtzDrivers.forEach((ptzD) => {
-      $(".PtzList").append(`<option value="${ptzD}">${ptzD}</option>`)
+    PtzDrivers.forEach((dType) => {
+      $(".PtzList").append(`<option value="${dType}">${dType}</option>`)
+
+
+    });
+
+    //Device type list
+    deviceType.forEach((ptzD) => {
+      $(".deviceType").append(`<option value="${ptzD}">${ptzD}</option>`)
 
 
     });
