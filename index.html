@@ -918,6 +918,15 @@ console.log(`
 });
 
 
+// added focus function
+$('.mac1').on('input', function(event) {
+    let mac1 = event.currentTarget.value;
+    if( mac1.length === 2){
+      $(".mac2, .mac3").focus()
+    }
+});
+
+
   </script>
 </body>
 
