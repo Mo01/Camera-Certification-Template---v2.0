@@ -790,14 +790,13 @@
         </div>
       </div>
 
-
-      <button type="submit" class="btn btn-primary submitB">Submit</button>
+      <button type="submit" class="btn btn-primary submitB" >Submit</button>
+      <!-- onclick="window.print()" -->
     </form>
   </div>
 
 
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
 
   <!-- JS  Jquery-->
@@ -921,11 +920,20 @@ console.log(`
 // added focus function
 $('.mac1').on('input', function(event) {
     let mac1 = event.currentTarget.value;
+    console.log(mac1);
     if( mac1.length === 2){
-      $(".mac2, .mac3").focus()
+      $(".mac2").focus()
     }
 });
 
+
+// PDF
+$(".submitB").on("click", () => {
+  var doc = new jsPDF()
+
+doc.text('Hello world!', 10, 10)
+doc.save('a4.pdf')
+})
 
   </script>
 </body>
